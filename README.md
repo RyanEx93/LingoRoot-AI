@@ -1,4 +1,14 @@
-from fastapi import APIRouter, UploadFile, File
+def translate_text(text: str, target_lang: str = "en") -> str:
+    # Mock translation logic (replace with model call)
+    return f"[Translated to {target_lang}]: {text}"
+
+def translate_audio(file, target_lang: str = "en"):
+    # Mock audio translation
+    content = file.file.read()
+    return {
+        "transcription": "Mock transcription of audio",
+        "translation": f"[Translated audio to {target_lang}]"
+    }from fastapi import APIRouter, UploadFile, File
 from services.translation_service import translate_text, translate_audio
 
 router = APIRouter()
