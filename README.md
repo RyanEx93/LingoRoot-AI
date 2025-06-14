@@ -1,3 +1,139 @@
+LingoRoot AI - Backend + Frontend + AI Model Structure (Simplified)
+
+------------------------------
+
+README.md
+
+------------------------------
+
+"""
+
+LingoRoot AI
+
+LingoRoot AI is a powerful, secure, multilingual AI translation app designed for cultural understanding, learning, and communication worldwide.
+
+🌍 Key Features
+
+Neural real-time translation (text, voice, camera, image, music)
+
+African/local language support
+
+Voice cloning & speaker diarization
+
+Offline packs, privacy-first with quantum-resistant encryption
+
+Community dictionary, cultural proverbs, and AR translator
+
+Smart AI tutor, visual idioms, accent matcher & more
+
+
+🚀 Tech Stack
+
+Flutter (Frontend - Android/iOS/Web)
+
+FastAPI + PostgreSQL (Backend)
+
+Python Transformers + OpenAI + Whisper (AI Models)
+
+Firebase (Realtime features, Auth)
+
+Docker, GitHub Actions, AWS/GCP/Azure ready
+
+
+📦 Installation
+
+# Backend Setup
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+# Flutter App Setup
+cd frontend
+flutter pub get
+flutter run
+
+🔐 Security
+
+Biometric admin login
+
+AES + Post-Quantum encryption
+
+IP/Device verification
+
+
+🧠 AI Model Paths
+
+/models/translator_model.pt
+
+/models/speaker_diarization_model.onnx
+
+/models/voice_clone_v2.pkl
+
+
+📜 License
+
+MIT License - see LICENSE file
+
+✉️ Contact
+
+Ryan Sekajugo - ryan.sekajugo@gmail.com """
+
+------------------------------
+
+LICENSE
+
+------------------------------
+
+""" MIT License
+
+Copyright (c) 2025 Ryan Sekajugo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. """
+
+------------------------------
+
+.gitignore
+
+------------------------------
+
+"""
+
+Python
+
+pycache/ *.pyc
+
+Flutter
+
+build/ .dart_tool/ .flutter-plugins .flutter-plugins-dependencies .pub-cache/
+
+IDE
+
+.idea/ .vscode/
+
+Models
+
+models/.pt models/.onnx models/*.pkl
+
+Secrets
+
+.env key.json """
+
+------------------------------
+
+GitHub Actions CI/CD Workflow (optional)
+
+------------------------------
+
+.github/workflows/deploy.yml
+
+""" name: LingoRoot CI/CD
+
+on: push: branches: [ main ]
+
+jobs: build: runs-on: ubuntu-latest steps: - uses: actions/checkout@v3 - name: Set up Python uses: actions/setup-python@v4 with: python-version: 3.10 - name: Install dependencies run: | cd backend pip install -r requirements.txt - name: Run Backend run: | uvicorn main:app --host 0.0.0.0 --port 8000 """
+
 🌍 LingoRoot AI – The Future of Language, Culture & Intelligence
 
 LingoRoot AI is a cutting-edge multilingual translation and cultural intelligence app designed to preserve languages, empower communities, and connect the world through smart, adaptive technology.
