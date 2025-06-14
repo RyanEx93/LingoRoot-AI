@@ -1,3 +1,11 @@
+LingoRoot AI App Directory Structure (Python backend + Flutter frontend + AI engine)
+
+lingoroot_ai/ ├── backend/ │   ├── app.py                  # Main FastAPI app │   ├── auth.py                 # JWT authentication and user security │   ├── db.py                   # MongoDB/Firebase/SQL connector │   ├── models/ │   │   └── user.py             # User schema and data models │   ├── routes/ │   │   ├── auth_routes.py      # Routes for login/signup │   │   └── translate_routes.py # Translation + AI endpoints │   ├── services/ │   │   ├── ai_engine.py        # Translation engine core logic │   │   ├── voice_processor.py  # Audio input processing │   │   └── ar_handler.py       # AR + OCR features │   └── utils/ │       └── helpers.py          # Utility functions │ ├── frontend_flutter/ │   ├── lib/ │   │   ├── main.dart           # Entry point │   │   ├── screens/ │   │   │   ├── home_screen.dart │   │   │   ├── login_screen.dart │   │   │   └── translator_screen.dart │   │   ├── widgets/ │   │   │   └── language_card.dart │   │   └── services/ │   │       └── api_service.dart  # Connects frontend to backend │   └── assets/ │       ├── images/ │       ├── icons/ │       └── audio/ │ ├── ai_models/ │   ├── translator_model.pt     # Trained PyTorch/NLP model │   └── emotion_model.onnx      # Optional emotion classifier │ ├── firebase.json               # Firebase config (optional) ├── pubspec.yaml                # Flutter dependencies ├── requirements.txt            # Python backend dependencies ├── README.md                   # App documentation ├── LICENSE                     # MIT License └── .gitignore                  # Git ignore file
+
+Suggestion: Store secrets (API keys, credentials) in .env files and exclude from Git
+
+Ready for GitHub push (private repo recommended)
+
 LingoRoot AI - Backend + Frontend + AI Model Structure (Simplified)
 
 ------------------------------
