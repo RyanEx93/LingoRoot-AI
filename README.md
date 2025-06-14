@@ -1,0 +1,2 @@
+# LingoRoot-AI
+Multitasking app
