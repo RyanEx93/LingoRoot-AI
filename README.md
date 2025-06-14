@@ -1,4 +1,17 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import APIRouter, UploadFile, File
+from services.translation_service import translate_text, translate_audio
+
+router = APIRouter()
+
+@router.post("/text")
+def text_translation(payload: dict):
+    text = payload.get("text")
+    target_lang = payload.get("target_lang", "en")
+    return {"translation": translate_text(text, target_lang)}
+
+@router.post("/audio")
+def audio_translation(file: UploadFile = File(...), target_lang: str = "en"):
+    return translate_audio(file, target_lang)from fastapi import FastAPI, UploadFile, File
 from routes import translator, auth, media, feedback
 
 app = FastAPI(title="LingoRoot AI", version="1.0.0")
